@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+
+
+{% block main %}
+    <div class="count py-lg-3">
+        <h2>Title of page</h2>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aliquam aut eaque molestiae non vero voluptatibus. A accusantium, architecto aut, consectetur cumque delectus enim est facere, harum iste quod voluptate.
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aliquam aut eaque molestiae non vero voluptatibus. A accusantium, architecto aut, consectetur cumque delectus enim est facere, harum iste quod voluptate.
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aliquam aut eaque molestiae non vero voluptatibus. A accusantium, architecto aut, consectetur cumque delectus enim est facere, harum iste quod voluptate.
+        </p>
+
+    </div>
+
+
+
+
+{% endblock main %}
+
+{% block sidebar %}
+    {{ parent() }}
+
+    {#{{ show_source_code(_self) }}#}
+{% endblock sidebar %}

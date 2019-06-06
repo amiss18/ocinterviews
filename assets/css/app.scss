@@ -1,0 +1,105 @@
+
+// Required
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+
+//$web-font-path: 'data:text/css;base64,';
+
+@import "~font-awesome";
+//@import "~font-awesome/scss/variables";
+
+//@import "~font-awesome/scss/font-awesome.scss";
+
+
+
+$theme-colors: (
+        "primary":    #f50057,
+        "secondary":  #c62828,
+        "success":    $success,
+        "info":       $info,
+        "warning":    $warning,
+        "danger":     $danger,
+        "light":      #bb002f,
+        "dark":       #ff5983
+);
+@import '~bootstrap';
+.body-container {
+  background: #fff;
+}
+
+
+#sidebar {
+  border-radius: 10px 10px;
+
+  background: $gray-600;
+  color: #fff;
+
+  .section {
+    margin-bottom: 2em
+  }
+
+  p {
+    font-size: 15px
+  }
+
+  p + p {
+  margin: 1.5em 0 0
+}
+}
+
+body {
+    background-color: lightgray;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh
+}
+
+
+header {
+  margin-bottom: 2em;
+
+  ul.nav li {
+    margin-bottom: 0
+  }
+
+}
+
+
+
+.body-container {
+  flex: 1;
+  /* needed to prevent pages with a very small height and browsers not supporting flex */
+  min-height: 600px;
+
+  #main h1,  #main h2 {
+    margin-top: 0
+  }
+
+}
+
+
+//--------- footer-------
+footer {
+  background: $gray-800;
+  margin-top: 2em;
+  padding-top: 2em;
+  padding-bottom: 2em;
+
+  p {
+    color: #fff;
+    font-size: 13px;
+    margin-bottom: 0.25em
+  }
+
+  #footer-resources {
+    text-align: right;
+
+    i {
+      color: $gray-100;
+      font-size: 28.5px;
+      margin-left: 0.5em
+    }
+  }
+}
+

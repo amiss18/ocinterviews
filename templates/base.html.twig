@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="{{ app.request.locale }}">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>{% block title %}Openclassroom interviews for back dev{% endblock %}</title>
+    {% block stylesheets %}
+        {{ encore_entry_link_tags('css/app') }}
+    {% endblock %}
+
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}"/>
+    <style>
+
+    </style>
+</head>
+<body>
+{% block header %}
+    <header>
+        {% include('partials/_nav.html.twig') %}
+
+    </header>
+{% endblock %}
+
+<div class="container body-container">
+    {% block body %}
+        <div class="row">
+            <div id="main" class="col-sm-9">
+                {{ include('partials/_flash_messages.html.twig') }}
+
+                {% block main %}{% endblock %}
+            </div>
+
+            <div id="sidebar" class="col-sm-3">
+                {% block sidebar %}
+                    <div class="section">
+                        sidebar nav
+
+
+                    </div>
+                {% endblock %}
+            </div>
+        </div>
+    {% endblock %}
+</div>
+
+{% block footer %}
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div id="footer-copyright" class="col-md-6">
+                    <p>&copy; {{ 'now'|date('Y') }} - The Symfony Project for OC interviews</p>
+                </div>
+                <div id="footer-resources" class="col-md-6">
+                    <p>
+                        <a href="#" title="OC Twitter">
+                            <i class="fa fa-twitter" aria-hidden="true"></i>
+                        </a>
+                        <a href="#" title="OC Facebook">
+                            <i class="fa fa-facebook" aria-hidden="true"></i>
+                        </a>
+
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+{% endblock %}
+
+{% block javascripts %}
+    {{ encore_entry_script_tags('js/app') }}
+    <!-- Renders app.js & a webpack runtime.js file
+    <script src="/build/runtime.js"></script>
+    <script src="/build/app.js"></script> -->
+{% endblock %}
+</body>
+</html>
+
